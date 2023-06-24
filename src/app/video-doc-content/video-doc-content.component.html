@@ -1,0 +1,181 @@
+
+ <!-- <div class="container">
+  <div class="row">
+    <div class="col-md-12" style="overflow-y: scroll; height: 65vh">
+      <div class="row">
+        <div class="col-md-7 mt-3 border shadow-sm p-3 mb-1 bg-body">
+          <div class="card">
+            <div class="card-body ratio ratio-4x3">
+              <iframe
+                width="200px"
+                class=""
+                src="https://www.youtube.com/embed/04g-9Pznw3g"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="offset-md-1 col-md-4 mt-5 ">
+          <div class="row">
+            <div class="col-md-12">
+              <h2 class=" shadow text-white h3  mt-2 display-7" style="font-family: 'Nanum Gothic', sans-serif; background-color: rgb(190, 84, 144);">
+                <strong> &nbsp;&nbsp;whole number</strong>
+                <br/>
+                </h2>
+                <small class="text-muted">work book</small>
+            </div>
+           </div>
+           <div class="row">
+            <div class="col-md-12">
+              <h4 class="text-muted"><strong>Description:</strong> </h4>
+           <p>
+            Additions, Subtractions, Multiplications, and Divisions, Rounding the Numbers, Write in words and numbers
+            </div>
+           </div>
+           <div class="row mt-4">
+            <div class="col-md-12">
+                 <button mat-flat-button color="primary" disabled>Download</button>&nbsp;&nbsp;
+                 <button mat-flat-button color="warn">Preview</button>
+            </div>
+          </div>
+
+        </div>
+
+
+
+      </div>
+      <br>
+      <br>
+
+    </div>
+  </div>
+</div> -->
+
+<div class="container">
+  <div class="row" style="overflow-y: scroll;height:65vh">
+    <div class="col-md-12" >
+      <mat-accordion class="example-headers-align" multi  >
+        <mat-expansion-panel  *ngFor="let d of docSelection; let i =index" style="margin-bottom: 10px;">
+          <mat-expansion-panel-header>
+            <mat-panel-title style="color:rgb(205, 85, 0);font-family: 'Nanum Gothic', sans-serif; font-weight:bold " class="h6">
+              <mat-icon matListItemIcon>library_books</mat-icon>&nbsp;&nbsp; <span style="color:rgb(5, 47, 87)">{{d.name}}</span>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div *ngIf="selectedMenu=='vl'" class="row " style="overflow-y: scroll;height:65vh">
+            <div class="col-md-12" >
+              <div class="row " >
+                <div class="col-md-7 mt-3 border shadow-sm p-3 mb-1 bg-body"  >
+                  <div class="card ">
+                    <div class="card-content ratio ratio-16x9">
+                      <!-- <iframe width="200px"controls="0" class="" src="https://www.youtube.com/embed/04g-9Pznw3g"  allowfullscreen></iframe> -->
+                      <figure>
+                        <ng-container *ngIf="videodisabled; else videoblock" class="text-center">
+                            <img  style="background-size: cover;" src="../../assets/images/video-poster.jpg" class="img-fluid ">
+                        </ng-container>
+                        <ng-template #videoblock >
+                            <!-- <iframe style="pointer-events: none;" width="100%" height="100%" src="https://www.youtube.com/embed/QYU8zydUqD8?&theme=dark&autohide=2&mute=1&modestbranding=1&showinfo=0&autoplay=1&controls=0" allowfullscreen></iframe> -->
+                        </ng-template>
+
+                    </figure>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="col-md-5 mt-4 ">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <h2 class=" shadow text-white h3  mt-2 display-7" style="font-family: 'Nanum Gothic', sans-serif; background-color: rgb(190, 84, 144);">
+                        <strong> &nbsp;&nbsp;whole number</strong>
+                        <br/>
+                        </h2>
+                        <small class="text-muted">work book</small>
+                    </div>
+                   </div>
+                   <div class="row">
+                    <div class="col-md-12">
+                      <h4 class="text-muted"><strong>Description:</strong> </h4>
+                   <p>
+                    Additions, Subtractions, Multiplications, and Divisions, Rounding the Numbers, Write in words and numbers
+                    </div>
+                   </div>
+                   <div class="row mt-4">
+                    <div class="col-md-12">
+                          <button (click)="playYoutubeVideo(d.video[i]['src'],'preview')" mat-flat-button color="primary" disabled="false">watch</button>
+                          &nbsp;&nbsp;
+                         <button (click)="playYoutubeVideo(d.video[i]['src'],'demo')" mat-flat-button color="warn">Demo for 10sec</button>
+                    </div>
+                  </div>
+
+                </div>
+
+
+
+              </div>
+              <br>
+              <br>
+
+            </div>
+          </div>
+
+          <!-- PD -->
+          <div *ngIf="selectedMenu=='pd'" class="row " style="overflow-y: scroll;height:65vh">
+            <div class="col-md-12" >
+              <div class="row " >
+                <div class="col-md-7 mt-3 border shadow-sm p-3 mb-1 bg-body"  >
+                  <div class="card ">
+                    <div class="card-content " >
+                      <!-- <iframe width="200px"controls="0" class="" src="https://www.youtube.com/embed/04g-9Pznw3g"  allowfullscreen></iframe> -->
+                      <figure>
+                        <ng-container *ngIf="videodisabled; else videoblock" class="text-center">
+                            <img  src="https://m.media-amazon.com/images/I/71VHQeVXixL.jpg" class="img-fluid " >
+                        </ng-container>
+                        <ng-template #videoblock >
+                            <!-- <iframe style="pointer-events: none;" width="100%" height="100%" src="https://www.youtube.com/embed/QYU8zydUqD8?&theme=dark&autohide=2&mute=1&modestbranding=1&showinfo=0&autoplay=1&controls=0" allowfullscreen></iframe> -->
+                        </ng-template>
+
+                    </figure>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="col-md-5 mt-4 ">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <h2 class=" shadow text-white h3  mt-2 display-7" style="font-family: 'Nanum Gothic', sans-serif; background-color: rgb(190, 84, 144);">
+                        <strong> &nbsp;&nbsp;whole number</strong>
+                        <br/>
+                        </h2>
+                        <small class="text-muted">work book</small>
+                    </div>
+                   </div>
+                   <div class="row">
+                    <div class="col-md-12">
+                      <h4 class="text-muted"><strong>Description:</strong> </h4>
+                   <p>
+                    Additions, Subtractions, Multiplications, and Divisions, Rounding the Numbers, Write in words and numbers
+                    </div>
+                   </div>
+                   <div class="row mt-4">
+                    <div class="col-md-12" >
+                          <button (click)="viewBook(d.video[i]['src'])" mat-flat-button color="primary" disabled="false">Read</button>
+                          &nbsp;&nbsp;
+                    </div>
+                  </div>
+
+                </div>
+
+
+
+              </div>
+              <br>
+              <br>
+
+            </div>
+          </div>
+
+
+        </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+<!-- <h1 mat-dialog-title>Dialog to Play Video</h1>
+<div mat-dialog-content>
+    <iframe style="border: none;" src="https://www.youtube.com/embed/a9__D53WsUs" width="350" height="300"
+        loading="lazy" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen fxFlex="100%"></iframe>
+</div>
+<div mat-dialog-actions>
+    <button mat-button mat-dialog-close>Close</button>
+</div> -->
+<div mat-dialog-content  *ngIf="btnInfo==='demo'">
+   <div class="row">
+    <div class="col-md-12 ">
+      <div class="videoWrapper">
+        <iframe [src]='safeUrl' title="Math-Knots" allow="autoplay" frameborder="0" allowfullscreen BlockCopyLink="true" ></iframe>
+        <!-- <iframe style="border: none;cursor:none" src="https://www.youtube.com/embed/a9__D53WsUs?showInfo=0" type="application/x-shockwave-flash" width="350" height="300"
+        loading="lazy" frameborder="0" allow="accelerometer; autoplay; modestbranding; encrypted-media; gyroscope; picture-in-picture" allowfullscreen webkitallowfullscreen mozallowfullscreen allowfullscreen autoplay fxFlex="100%"></iframe>
+        allow="accelerometer; autoplay; modestbranding; encrypted-media; gyroscope; picture-in-picture" allowfullscreen -->
+      </div>
+    </div>
+   </div>
+</div>
+<!-- PDF -->
+
+<div mat-dialog-content *ngIf="btnInfo==='read'"  >
+
+   <div class="row" >
+    <div class="col-md-12">
+      <div class="videoWrapper" style="overflow:scroll; height:100px"  >
+        <embed style="pointer-events:auto" src="assets/pdf/dummy.pdf#toolbar=0&navpane=0" >        <!-- <iframe style="border: none;cursor:none" src="https://www.youtube.com/embed/a9__D53WsUs?showInfo=0" type="application/x-shockwave-flash" width="350" height="300"
+        loading="lazy" frameborder="0" allow="accelerometer; autoplay; modestbranding; encrypted-media; gyroscope; picture-in-picture" allowfullscreen webkitallowfullscreen mozallowfullscreen allowfullscreen autoplay fxFlex="100%"></iframe>
+        allow="accelerometer; autoplay; modestbranding; encrypted-media; gyroscope; picture-in-picture" allowfullscreen -->
+      </div>
+    </div>
+   </div>
+</div>
+<!-- <hr> -->
+
+<!-- <div mat-dialog-actions > -->
+  <!-- <button  mat-flat-button color="warn" (click)="close()">Close</button> -->
+  <!-- <h5>Please subscribe to watch full video</h5> -->
+<!-- </div> -->

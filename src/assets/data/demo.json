@@ -1,0 +1,420 @@
+{
+  "id": 1,
+  "state": "Missouri: MAP Testing",
+  "schools": [
+    {
+      "name": "Elementary School",
+      "gradeInfo": [
+        {
+          "name": "Pre-K",
+          "videoSection": [
+            {
+              "content": "Fractions",
+              "seen": true,
+              "color": "#33aae6",
+              "data": [
+                {
+                  "name": "Chapter 1: Testing and Deploymnet",
+                  "children": [
+                    {
+                      "name": "Unit 1: Number & Number sense",
+                      "children": [
+                        {
+                          "key": "pd",
+                          "name": "Practice Drills",
+                          "visible": true,
+                          "material": [
+                            {
+                              "name": "Lesson 1",
+                              "video": [
+                                {
+                                  "src": {}
+                                },
+                                {
+                                  "src": {}
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "key": "pq",
+                          "name": "Practice Questions",
+                          "visible": true,
+                          "material": []
+                        },
+                        {
+                          "key": "vl",
+                          "name": "Video Lectures",
+                          "visible": false,
+                          "material": []
+                        },
+                        {
+                          "key": "ws",
+                          "name": "Worksheets",
+                          "visible": false,
+                          "material": []
+                        },
+                        {
+                          "key": "vs",
+                          "name": "Worksheets",
+                          "visible": false,
+                          "material": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Unit 2: Number",
+                      "children": [
+                        {
+                          "key": "pd",
+                          "name": "Practice Drills",
+                          "visible": true,
+                          "material": []
+                        },
+                        {
+                          "key": "pq",
+                          "name": "Practice Questions",
+                          "visible": true,
+                          "material": []
+                        },
+                        {
+                          "key": "vl",
+                          "name": "Video Lectures",
+                          "visible": false,
+                          "material": []
+                        },
+                        {
+                          "key": "ws",
+                          "name": "Worksheets",
+                          "visible": false,
+                          "material": []
+                        },
+                        {
+                          "key": "vs",
+                          "name": "Worksheets",
+                          "visible": false,
+                          "material": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Chapter 2: Deploymnet",
+                  "children": [
+                    {
+                      "name": "Unit 1: Work with AWS",
+                      "children": [
+                        {
+                          "key": "pd",
+                          "name": "Practice Drills",
+                          "visible": true,
+                          "material": []
+                        },
+                        {
+                          "key": "pq",
+                          "name": "Practice Questions",
+                          "visible": true,
+                          "material": []
+                        },
+                        {
+                          "key": "vl",
+                          "name": "Video Lectures",
+                          "visible": false,
+                          "material": []
+                        },
+                        {
+                          "key": "ws",
+                          "name": "Worksheets",
+                          "visible": false,
+                          "material": []
+                        },
+                        {
+                          "key": "vs",
+                          "name": "Worksheets",
+                          "visible": false,
+                          "material": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "K"
+        },
+        {
+          "name": "Grades 1",
+          "videoSection": [
+            {
+              "content": "Multiplications",
+              "color": "navy",
+              "seen": true,
+              "data": [
+                {
+                  "name": "Chapter 1.Rounding & Estimation",
+                  "children": [
+                    {
+                      "name": "Unit:1-Number & Number sense",
+                      "children": [
+                        {
+                          "key": "pd",
+                          "name": "Practice Drills",
+                          "visible": true,
+                          "material": [
+                            {
+                              "name": "Lesson 1",
+                              "video": [
+                                {
+                                  "src": "assets/pdf/dummy.pdf#toolbar=0"
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Lesson 2",
+                              "video": [
+                                {
+                                  "src": "assets/pdf/dummy.pdf#toolbar=0"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "key": "pq",
+                          "name": "Practice Questions",
+                          "visible": true,
+                          "material": [
+                            {
+                              "name": "Lesson 1",
+                              "video": [
+                                {
+                                  "src": "AjgD3CvWzS0"
+                                },
+                                {
+                                  "src": "AjgD3CvWzS0"
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Lesson 2",
+                              "video": [
+                                {
+                                  "src": "AjgD3CvWzS0"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "key": "vl",
+                          "name": "Video Lectures",
+                          "visible": true,
+                          "material": [
+                            {
+                              "name": "Lesson 1",
+                              "video": [
+                                {
+                                  "src": "AjgD3CvWzS0"
+                                },
+                                {
+                                  "src": "AjgD3CvWzS0"
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Lesson 2",
+                              "video": [
+                                {
+                                  "src": "AjgD3CvWzS0"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "key": "ws",
+                          "name": "Worksheets",
+                          "visible": false
+                        },
+                        {
+                          "key": "vs",
+                          "name": "View Samples",
+                          "visible": false
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Unit:2 - Number &  sense",
+                      "children": [
+                        {
+                          "key": "pd",
+                          "name": "Practice Drills",
+                          "visible": true
+                        },
+                        {
+                          "key": "pq",
+                          "name": "Practice Questions",
+                          "visible": true
+                        },
+                        {
+                          "key": "vl",
+                          "name": "Video Lectures",
+                          "visible": false
+                        },
+                        {
+                          "key": "ws",
+                          "name": "Worksheets",
+                          "visible": false
+                        },
+                        {
+                          "key": "vs",
+                          "name": "View Samples",
+                          "visible": false
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "content": "Integers",
+              "color": "purple",
+              "seen": true,
+              "data": [
+                {
+                  "name": "Number & Number sense",
+                  "children": [
+                    {
+                      "name": "Number & Number sense",
+                      "children": [
+                        {
+                          "key": "pd",
+                          "name": "Practice Drills",
+                          "visible": true
+                        },
+                        {
+                          "key": "pq",
+                          "name": "Practice Questions",
+                          "visible": true
+                        },
+                        {
+                          "key": "vl",
+                          "name": "Video Lectures",
+                          "visible": true
+                        },
+                        {
+                          "key": "ws",
+                          "name": "Worksheets",
+                          "visible": true
+                        },
+                        {
+                          "key": "vs",
+                          "name": "View Samples",
+                          "visible": true
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "content": "Divisions",
+              "color": "green",
+              "seen": true,
+              "data": [
+                {
+                  "name": "Number & Number sense",
+                  "children": [
+                    {
+                      "name": "Number & Number sense",
+                      "children": [
+                        {
+                          "key": "pd",
+                          "name": "Practice Drills",
+                          "visible": true
+                        },
+                        {
+                          "key": "pq",
+                          "name": "Practice Questions",
+                          "visible": true
+                        },
+                        {
+                          "key": "vl",
+                          "name": "Video Lectures",
+                          "visible": true
+                        },
+                        {
+                          "key": "ws",
+                          "name": "Worksheets",
+                          "visible": true
+                        },
+                        {
+                          "key": "vs",
+                          "name": "View Samples",
+                          "visible": true
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "content": "Faction",
+              "seen": true,
+              "data": []
+            }
+          ],
+          "books": [
+            {
+              "book": "whole number",
+              "subtitle": "work book",
+              "bookImageUrl": "https://m.media-amazon.com/images/I/71VHQeVXixL.jpg",
+              "details": "Description",
+              "describe": "Additions, Subtractions, Multiplications, and Divisions, Rounding the Numbers, Write in words and numbers",
+              "bookPurchaseUrl": ""
+            }
+          ]
+        },
+        {
+          "name": "Grades 2",
+          "books": [
+            {
+              "book": "whole number",
+              "subtitle": "work book",
+              "bookImageUrl": "https://m.media-amazon.com/images/I/71VHQeVXixL.jpg",
+              "details": "Description",
+              "bookPurchaseUrl": "",
+              "describe": "Additions, Subtractions, Multiplications, and Divisions, Rounding the Numbers, Write in words and numbers"
+            },
+            {
+              "book": "whole number",
+              "subtitle": "work book",
+              "bookImageUrl": "https://m.media-amazon.com/images/I/71VHQeVXixL.jpg",
+              "details": "Description",
+              "bookPurchaseUrl": "",
+              "describe": "Additions, Subtractions, Multiplications, and Divisions, Rounding the Numbers, Write in words and numbers"
+            },
+            {
+              "book": "whole number",
+              "subtitle": "work book",
+              "bookImageUrl": "https://m.media-amazon.com/images/I/71VHQeVXixL.jpg",
+              "details": "Description",
+              "bookPurchaseUrl": "",
+              "describe": "Additions, Subtractions, Multiplications, and Divisions, Rounding the Numbers, Write in words and numbers"
+            }
+          ]
+        }
+
+      ]
+    }
+
+  ]
+}

@@ -1,0 +1,370 @@
+
+
+<div class="row" *ngIf="selectedOption=='Add Content'">
+  <div class="col-md-12">
+
+    <div class="row">
+      <div class="col-md-4 mt-3  bg-body ">
+        <mat-form-field appearance="fill" style="width:100%">
+          <mat-label>Select State</mat-label>
+          <mat-select [(value)]="selectedState" >
+            <mat-option *ngFor="let state of bookDetails" [value]="state">
+                  {{state.state}}
+              </mat-option>
+
+          </mat-select>
+        </mat-form-field>
+       </div>
+
+       <div *ngIf="selectedState" class=" offset-md-1 col-md-3  mt-3  bg-body ">
+
+        <mat-form-field appearance="fill" style="width:100%">
+          <mat-label>Select School</mat-label>
+          <mat-select [(value)]="selectedSchool" >
+            <mat-option *ngFor="let schoolName of selectedState['schools']" [value]="schoolName">
+                  {{schoolName.name}}
+              </mat-option>
+
+          </mat-select>
+          </mat-form-field>
+      </div>
+
+      <div *ngIf="selectedSchool" class="offset-md-1  col-md-3 mt-3  bg-body ">
+
+        <mat-form-field appearance="fill" style="width:100%">
+          <mat-label>Select Grade</mat-label>
+          <mat-select [(value)]="selectedGrade" >
+            <mat-option *ngFor="let grade of selectedSchool['gradeInfo']" [value]="grade">
+                  {{grade.name}}
+              </mat-option>
+
+          </mat-select>
+          </mat-form-field>
+      </div>
+
+
+    </div>
+
+    <div class="row mt-5" >
+
+      <div class="offset-md-1 col-md-5 shadow-sm p-3 mb-5 bg-body rounded  " *ngIf="selectedState" >
+
+           <h4 class="mt-5"> Selected State: <strong class="text-right">{{selectedState?.state}} </strong></h4>
+           <h4 class="mt-5"> Selected School: <strong class="text-right">{{selectedSchool?.name}} </strong></h4>
+           <h4 class="mt-5"> Selected Grade: <strong class="text-right">{{selectedGrade?.name}} </strong></h4>
+
+
+      </div>
+     <div class="col-md-5 shadow-lg p-3 mb-5 bg-body rounded" *ngIf="selectedGrade">
+     <div class="row">
+      <div class="col-md-12">
+        <section class="example-section">
+          <mat-form-field class="col-md-12 mt-3">
+            <mat-label style="font-size: 18px">Enter Content</mat-label>
+            <input name="content" [(ngModel)]="UserInputContent" matInput placeholder="Integer | Divide | Fraction"/>
+          </mat-form-field>
+
+          <mat-form-field class="col-md-5 mt-3">
+            <mat-label style="font-size: 18px">Choose Color</mat-label>
+            <input name="color" type="color" [(ngModel)]="UserInputColor" matInput />
+          </mat-form-field>
+
+
+        </section>
+      </div>
+     </div>
+      <div class="row  mt-5">
+        <div class="offset-md-4 col-md-6 ">
+          <button mat-flat-button color="accent" (click)="save(selectedOption)" >
+              SAVE </button>
+
+
+        </div>
+
+
+      </div>
+
+
+     </div>
+
+</div>
+  </div>
+</div>
+
+<div class="row" *ngIf="selectedOption=='Add Chapter'">
+  <div class="col-md-12">
+
+    <div class="row">
+      <div class="col-md-3 mt-3  bg-body ">
+        <mat-form-field appearance="fill" style="width:100%">
+          <mat-label>Select State</mat-label>
+          <mat-select [(value)]="selectedState" >
+            <mat-option *ngFor="let state of bookDetails" [value]="state">
+                  {{state.state}}
+              </mat-option>
+
+          </mat-select>
+        </mat-form-field>
+       </div>
+
+       <div *ngIf="selectedState" class=" col-md-3  mt-3  bg-body ">
+
+        <mat-form-field appearance="fill" style="width:100%">
+          <mat-label>Select School</mat-label>
+          <mat-select [(value)]="selectedSchool" >
+            <mat-option *ngFor="let schoolName of selectedState['schools']" [value]="schoolName">
+                  {{schoolName.name}}
+              </mat-option>
+
+          </mat-select>
+          </mat-form-field>
+      </div>
+
+      <div *ngIf="selectedSchool" class="col-md-3 mt-3  bg-body ">
+
+        <mat-form-field appearance="fill" style="width:100%">
+          <mat-label>Select Grade</mat-label>
+          <mat-select [(value)]="selectedGrade" >
+            <mat-option *ngFor="let grade of selectedSchool['gradeInfo']" [value]="grade">
+                  {{grade.name}}
+              </mat-option>
+
+          </mat-select>
+          </mat-form-field>
+      </div>
+
+      <div *ngIf="selectedGrade" class="col-md-3 mt-3  bg-body ">
+
+        <mat-form-field appearance="fill" style="width:100%">
+          <mat-label>Select Grade</mat-label>
+          <mat-select [(value)]="selectedSection" >
+            <mat-option *ngFor="let grade of selectedGrade['videoSection']" [value]="grade">
+                  {{grade.content}}
+              </mat-option>
+
+          </mat-select>
+          </mat-form-field>
+      </div>
+
+
+    </div>
+
+    <div class="row mt-5" >
+
+      <div class="offset-md-1 col-md-5 shadow-sm p-3 mb-5 bg-body rounded  " *ngIf="selectedState" >
+
+           <h4 class="mt-5"> Selected State: <strong class="text-right">{{selectedState?.state}} </strong></h4>
+           <h4 class="mt-5"> Selected School: <strong class="text-right">{{selectedSchool?.name}} </strong></h4>
+           <h4 class="mt-5"> Selected Grade: <strong class="text-right">{{selectedGrade?.name}} </strong></h4>
+           <h4 class="mt-5"> Selected Grade: <strong class="text-right">{{selectedSection?.content}} </strong></h4>
+
+
+      </div>
+     <div class="col-md-5 shadow-lg p-3 mb-5 bg-body rounded" *ngIf="selectedSection">
+     <div class="row">
+      <div class="col-md-12">
+        <section class="example-section">
+          <mat-form-field class="col-md-12 mt-3">
+            <mat-label style="font-size: 18px">Chapter Name</mat-label>
+            <input name="content" [(ngModel)]="UserInputContent" matInput placeholder="e.g. Chapter 1.Rounding & Estimation"/>
+          </mat-form-field>
+
+          <mat-form-field class="col-md-12 mt-3">
+            <mat-label style="font-size: 18px">Unit Name</mat-label>
+            <input name="unit" [(ngModel)]="UserInputUnit" matInput placeholder="e.g.Unit:1-Number & Number sense"/>
+          </mat-form-field>
+
+
+
+        </section>
+      </div>
+     </div>
+      <div class="row  mt-5">
+        <div class="offset-md-4 col-md-6 ">
+          <button mat-flat-button color="accent" (click)="save(selectedOption)" >
+              SAVE </button>
+
+
+        </div>
+
+
+      </div>
+
+
+     </div>
+
+</div>
+  </div>
+</div>
+
+<div class="row" *ngIf="selectedOption=='Add Material'">
+  <div class="col-md-12">
+
+    <div class="row">
+      <div class="col-md-3 mt-3  bg-body ">
+        <mat-form-field appearance="fill" style="width:100%">
+          <mat-label>Select State</mat-label>
+          <mat-select [(value)]="selectedState" >
+            <mat-option *ngFor="let state of bookDetails" [value]="state">
+                  {{state.state}}
+              </mat-option>
+
+          </mat-select>
+        </mat-form-field>
+       </div>
+
+       <div *ngIf="selectedState" class=" col-md-3  mt-3  bg-body ">
+
+        <mat-form-field appearance="fill" style="width:100%">
+          <mat-label>Select School</mat-label>
+          <mat-select [(value)]="selectedSchool" >
+            <mat-option *ngFor="let schoolName of selectedState['schools']" [value]="schoolName">
+                  {{schoolName.name}}
+              </mat-option>
+
+          </mat-select>
+          </mat-form-field>
+      </div>
+
+      <div *ngIf="selectedSchool" class="col-md-3 mt-3  bg-body ">
+
+        <mat-form-field appearance="fill" style="width:100%">
+          <mat-label>Select Grade</mat-label>
+          <mat-select [(value)]="selectedGrade" >
+            <mat-option *ngFor="let grade of selectedSchool['gradeInfo']" [value]="grade">
+                  {{grade.name}}
+              </mat-option>
+
+          </mat-select>
+          </mat-form-field>
+      </div>
+
+      <div *ngIf="selectedGrade" class="col-md-3 mt-3  bg-body ">
+
+        <mat-form-field appearance="fill" style="width:100%">
+          <mat-label>Select Grade</mat-label>
+          <mat-select [(value)]="selectedSection" >
+            <mat-option *ngFor="let grade of selectedGrade['videoSection']" [value]="grade">
+                  {{grade.content}}
+              </mat-option>
+
+          </mat-select>
+          </mat-form-field>
+      </div>
+
+
+    </div>
+
+   <div class="row">
+     <div class="col-md-6">
+
+       <div class="row mt-5 " >
+
+        <div *ngIf="selectedSection" class="offset-md-1 col-md-10 shadow-sm p-1 mb-1 bg-body rounded ">
+
+          <mat-form-field appearance="fill" style="width:100%">
+            <mat-label>Select Chapter</mat-label>
+            <mat-select [(value)]="selectedChapter" >
+              <mat-option *ngFor="let chapter of selectedSection['data']" [value]="chapter">
+                    {{chapter.name}}
+                </mat-option>
+
+            </mat-select>
+            </mat-form-field>
+
+
+        </div>
+
+
+       </div>
+       <div class="row " >
+
+        <div *ngIf="selectedChapter" class="offset-md-1 col-md-10  ">
+
+          <mat-form-field appearance="fill" style="width:100%">
+            <mat-label>Select Unit</mat-label>
+            <mat-select [(value)]="selectedUnit" >
+              <mat-option *ngFor="let unit of selectedChapter['children']" [value]="unit">
+                    {{unit.name}}
+                </mat-option>
+
+            </mat-select>
+            </mat-form-field>
+
+
+        </div>
+
+
+       </div>
+
+
+     </div>
+
+
+     <div class="col-md-5 mt-4 shadow-lg p-3 mb-5 bg-body rounded" *ngIf="selectedUnit">
+      <div class="row">
+       <div class="col-md-12">
+         <section class="example-section">
+
+          <mat-form-field  class="col-md-12 mt-3" appearance="fill" style="width:100%">
+            <mat-label>Select Material</mat-label>
+            <mat-select [(value)]="selectedMaterial" >
+              <mat-option *ngFor="let material of selectedUnit['children']" [value]="material">
+                    {{material.name}}
+                </mat-option>
+
+            </mat-select>
+            </mat-form-field>
+
+           <mat-form-field class="col-md-12 mt-3">
+             <mat-label style="font-size: 18px">Lesson Name </mat-label>
+             <input name="content" [(ngModel)]="UserInputContent" matInput placeholder="e.g. Lesson 1"/>
+           </mat-form-field>
+
+           <mat-form-field class="col-md-12 mt-3">
+            <div>
+              <mat-toolbar>
+                <!-- Display files names -->
+                <input matInput [(ngModel)]="fileAttr" readonly name="name" />
+                <!-- Browse Button -->
+                <button mat-flat-button color="primary">Browse File</button>
+              </mat-toolbar>
+              <!-- Fetch selected filed on change -->
+              <input
+                type="file"
+                #fileInput
+                id="uploadFile"
+                (change)="uploadFileEvt($event)"
+                name="uploadFile"
+
+
+              />
+            </div>
+          </mat-form-field>
+
+
+
+         </section>
+       </div>
+      </div>
+       <div class="row  mt-5">
+         <div class="offset-md-4 col-md-6 ">
+           <button mat-flat-button color="accent" (click)="save(selectedOption)" >
+               SAVE </button>
+
+
+         </div>
+
+
+       </div>
+
+
+      </div>
+
+
+   </div>
+
+
+  </div>
+</div>
+

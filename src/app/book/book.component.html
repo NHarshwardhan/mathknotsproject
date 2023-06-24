@@ -1,0 +1,45 @@
+  <div class="row" >
+    <div class="offset-md-1 col-md-2 mt-5  bg-body ">
+      <mat-form-field appearance="fill" style="width:100%">
+        <mat-label>Select State</mat-label>
+        <mat-select [(value)]="selectedState" >
+          <mat-option *ngFor="let state of bookDetails" [value]="state.schools">
+                {{state.state}}
+            </mat-option>
+
+        </mat-select>
+      </mat-form-field>
+     </div>
+
+     <div *ngIf="selectedState" class=" border col-md-8 mt-5 shadow-sm p-1 mb-5 bg-body rounded ">
+
+      <nav mat-tab-nav-bar [backgroundColor]="background" [tabPanel]="tabPanel">
+        <a  style="font-size:17px;color:rgb(10, 0, 0)" mat-tab-link *ngFor="let schoolName of selectedState"
+           (click)="fetchBookInfo(schoolName)"
+           > {{schoolName.name}}   </a>
+
+        <mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
+      </nav>
+    </div>
+
+
+
+  </div>
+
+  <div class="row" *ngIf="!selectedState">
+     <div class="offset-md-1 col-md-11 mt-5  bg-body ">
+           <img class="img-fluid" src="https://www.pngall.com/wp-content/uploads/2018/05/Books-PNG-File-Download-Free.png" alt="">
+     </div>
+  </div>
+
+   <div class="row" *ngIf="bookDisplayData">
+       <div class="col-md-12">
+           <app-book-display [bookdata]="bookDisplayData">
+
+           </app-book-display>
+       </div>
+   </div>
+
+
+
+

@@ -1,0 +1,28 @@
+<div class=" mt-5 ">
+  <div class="row ">
+   <div class="offset-md-1 col-md-2  shadow-sm p-1 mb-2 bg-body rounded " style="overflow-y: scroll; height:87vh">
+    <ul class="nav flex-column">
+      <li class="nav-item ">
+        <a color="primary" mat-button [routerLink]="['/admin/add']" >Add Unit Meterial</a>
+      </li>
+      <li class="nav-item ">
+        <a color="primary" mat-button [routerLink]="['/admin/video_material']" >Video Learning Material</a>
+      </li>
+      <li class="nav-item ">
+        <a color="primary" mat-button [routerLink]="['/admin/create/book']" >Add Books / Grade / State</a>
+      </li>
+      <li class="nav-item">
+        <a color="primary" mat-button [routerLink]="['login']" >Logout</a>
+      </li>
+
+    </ul>
+   </div>
+   <div class="col-md-8 shadow-sm p-3 mb-4 bg-body rounded" style="overflow-y: scroll; height:87vh">
+
+          <router-outlet></router-outlet>
+   </div>
+  </div>
+</div>
+`
+
+

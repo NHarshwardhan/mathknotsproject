@@ -1,0 +1,66 @@
+
+  <div class="row" >
+    <div class="offset-md-1 col-md-10 mt-2 "  >
+     <mat-tab-group  class="tab-group" [(selectedIndex)]="selectedTab" style="overflow-y: scroll; height:67vh">
+    <mat-tab *ngFor="let tab of bookdata.gradeInfo;" [label]="tab.name" >
+      <ng-template >
+        {{tab.name}}
+      </ng-template>
+      <section class="tab-container mt-4 " style="width:99%" >
+         <ng-container *ngFor="let t of tab['books']" >
+            <div class="row">
+                <div class="col-md-3  text-center mt-5" >
+                   <div class="row">
+                    <div class="col-md-12">
+                      <h2 class=" shadow text-white h4  mt-2 display-7" style="font-family: 'Nanum Gothic', sans-serif; background-color: rgb(190, 84, 144);">
+                        <strong>{{t['book']}}</strong>
+                        <br/>
+                        </h2>
+                        <small class="text-muted">{{t['subtitle']}}</small>
+                    </div>
+                   </div>
+                   <div class="row">
+                    <div class="col-md-12">
+                      <h4 class="text-muted"><strong>{{t['details']}}:</strong> </h4>
+                   <p>
+                    {{t['describe']}}
+                    </div>
+                   </div>
+                </div>
+                <div class="offset-md-1 col-md-3 mt-4">
+                 <div class="row">
+                    <div class="col-md-12">
+                      <img width="190px" height="190px" class="img-fluid shadow p-3 mb-2 bg-body rounded" [src]="t['bookImageUrl']" alt="">
+                    </div>
+                 </div>
+                 <div class="row mt-1">
+                  <div class="col-md-6 text-center  ">
+                    <button mat-raised-button (click)="openAmazon(t['bookBuyLink'])"  color="accent" style="">Buy Amazon</button>
+
+                  </div>
+                 </div>
+
+                </div>
+                <div class="col-md-4 mt-3 shadow p-3 mb-5 bg-body ">
+                  <div class="card ">
+                    <div class="card-content ratio ratio-16x9">
+                      <iframe width="199px" class="" src="https://www.youtube.com/embed/04g-9Pznw3g"  allowfullscreen></iframe>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+            </div>
+            <br/>
+            <hr>
+         </ng-container>
+
+
+      </section>
+    </mat-tab>
+  </mat-tab-group>
+  </div>
+  </div>
+
